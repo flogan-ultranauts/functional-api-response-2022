@@ -1,7 +1,7 @@
 # API Response test
 
 - This test executes basic API calls through public API with mock data. 
-- The test attapets to do the following:
+- The test attempts to do the following:
 
 - Return value based on input condition: it is relatively easy to test, as input can be defined and results can be authenticated. Does not return anything: When there is no return value, a behavior of API on the system is checked
 - Trigger some other API/event/interrupt: If an output of an API triggers some event or interrupt, then those events and interrupt listeners are tracked
