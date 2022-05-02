@@ -2,12 +2,12 @@ const request = require('supertest')('https://jsonplaceholder.typicode.com');
 const assert = require('chai').assert;
 
 describe('Users API', () => {
-  it.only(' GET all users in /users', () => {
+  it(' GET all users in /users', () => {
     return request
       .get('/users')
       .expect(200)
       .then((res) => {
-        console.log(JSON.stringify(res.body))
+        console.log(JSON.stringify(res.body));
         assert.isNotEmpty(res.body);
       });
   });
@@ -17,7 +17,8 @@ describe('Users API', () => {
       .get('/users/1')
       .expect(200)
       .then((res) => {
-        console.log(`specific user based on input ${res.body}`);
+        // console.log(`specific user based on input ${JSON.parse(res.body)}`);
+        console.log(JSON.stringify(res.body));
         assert.isNotEmpty(res.body);
       });
   });
@@ -32,7 +33,7 @@ describe('Users API', () => {
       });
   });
 
-  it('Triggter some other API  GET /users/1 then PUT /posts/1 ', () => {
+  it('Trigger some other API  GET /users/1 then PUT /posts/1 ', () => {
     let myUser;
     return request
       .get('/users/1')
@@ -63,6 +64,7 @@ describe('Users API', () => {
             assert.equal(res.body.id, postToUpdate.id);
           });
       });
+    done();
   });
 
   it('Update(Modify certain resource) data of the specific user PATCH /users', () => {
