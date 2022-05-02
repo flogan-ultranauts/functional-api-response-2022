@@ -9,3 +9,5 @@
 - Modify certain resources: If API call modifies some resources then it should be validated by accessing respective resources
 
 - Return stringify data and make data readable using: https://codebeautify.org/jsonviewer Test inputs in Postman or Insomnia i.e., https://jsonplaceholder.typicode.com/users/1
+
+- Used dummy/fake API test data: https://jsonplaceholder.typicode.com/
